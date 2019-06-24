@@ -5,7 +5,7 @@ terraform {
   }
 }
 module "example" {
-  source = "github.com/martinhristov90/tfeMoveStateModule"
+  source = "github.com/martinhristov90/tfeMoveStateModule?ref=v0.0.1"
 }
 
 resource "null_resource" "hello" {
