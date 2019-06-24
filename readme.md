@@ -133,7 +133,7 @@ Do you want to copy existing state to the new backend?
 Successfully configured the backend "atlas"! Terraform will automatically
 use this backend unless the backend configuration changes.
 ```
-- Now, when the TFE executes plan, it is going to be in sync with the `state` file.
+- Now, when the TFE executes plan, it is going to be in sync with the `state` file that has been already created locally, and represents the already created resources.
 
 - To destroy the created resources, you should execute :
     ```
