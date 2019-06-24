@@ -87,7 +87,7 @@
 - Create, a new GitHub repository and link it with TFE workspace, push the newly modified TF code to it.
 ```shell
 git remote -v # Review you have only one remote repo named "origin"
-git add remote repoTFE URL_OF_YOUR_GITHUB_REPO_THAT_IS_CONNECTED_TO_TFE_WORKSPACE
+git add remote repoTFE URL_OF_YOUR_GITHUB_REPO_THAT_IS_CONNECTED_TO_TFE_WORKSPACE # Adding your remote repository.
 git remote -v # Review you have two remotes
 git checkout -b addContent  # To checkout into new branch named "addContent"
 git add . # To stage all the files
