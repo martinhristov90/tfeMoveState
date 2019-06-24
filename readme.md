@@ -17,9 +17,9 @@
     ```
 - Change into the directory :
     ```
-    cd tfeMoveState/dir1
+    cd tfeMoveState
     ```
-- Run `terraform init` to download the needed providers and `terraform apply` to create the resources described in the `dir1/main.tf`. Your output should look like:
+- Run `terraform init` to download the needed providers and `terraform apply` to create the resources described in the `main.tf`. Your output should look like:
     ```
     An execution plan has been generated and is shown below.
     Resource actions are indicated with the following symbols:
@@ -54,10 +54,10 @@
     null_resource.hello (local-exec): Hello supposedly-miserably-optimal-raptor
     null_resource.hello: Creation complete after 0s (ID: 6725223686421428936)
     ```
-- Now, the resource `random_pet.name` is going to be moved to a separate module. For this purpose,file `dir1/main.tf` is needs to be changed to :
+- Now, the resource `random_pet.name` is going to be moved to a separate module. For this purpose,file `main.tf` is needs to be changed to :
     ```
     module "example" {
-      source = "../dir2"
+      source = "github.com/martinhristov90/tfeMoveStateModule?ref=v0.0.1"
     }
 
     resource "null_resource" "hello" {
@@ -101,7 +101,7 @@ git push repoTFE addContent # Pushing "addContent" branch to remote GitHub repo 
 ```shell
 export ATLAS_TOKEN=YOUR_TOKEN_HERE
 ```
-- Now, add the following section to `/dir1/main.tf` and substitute the values for `organization` and `workspace`.
+- Now, add the following section to `main.tf` and substitute the values for `organization` and `workspace`.
 ```
 terraform {
   backend "remote" {
