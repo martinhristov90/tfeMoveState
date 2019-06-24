@@ -83,7 +83,7 @@
     configuration and real physical resources that exist. As a result, no
     actions need to be performed.
     ```
-### Moving the state file to TFE.
+## Moving the state file to TFE.
 - Create, a new GitHub repository and link it with TFE workspace, push the newly modified TF code to it.
 ```shell
 git remote -v # Review you have only one remote repo named "origin"
