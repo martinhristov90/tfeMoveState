@@ -1,15 +1,12 @@
-terraform {
-  backend "atlas" {
-    name = "tyloo/tfeMoveState"
-    address = "https://app.terraform.io"
-  }
+resource "random_pet" "name" {
+  length    = "4"
+  separator = "-"
 }
-module "example" {
-  source = "github.com/martinhristov90/tfeMoveStateModule?ref=v0.0.1"
+output "display" {
+  value = "${random_pet.name.id}"
 }
-
 resource "null_resource" "hello" {
   provisioner "local-exec" {
-    command = "echo Hello ${module.example.display}"
+    command = "echo Hello ${random_pet.name.id}"
   }
 }
